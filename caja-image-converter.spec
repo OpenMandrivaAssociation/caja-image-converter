@@ -4,7 +4,7 @@
 Summary:	Caja extension to mass resize images
 Name:		caja-image-converter
 Version:	1.6.0
-Release:	1
+Release:	2
 Group:		Graphical desktop/Other
 License:	GPLv2+
 URL:		http://pub.mate-desktop.org
@@ -17,7 +17,8 @@ BuildRequires:	pkgconfig(libcaja-extension)
 
 Requires:	imagemagick
 Requires:	%{_lib}caja-extension1 >= 1.6.0
-Provides:   %{oname}-image-converter = %{version}-%{release}
+
+%rename %{oname}
 
 %description
 Adds a "Resize Images..." menu item to the context menu of all images. This
@@ -36,8 +37,6 @@ NOCONFIGURE=1 ./autogen.sh
 
 %install
 %makeinstall_std
-find %{buildroot} -name '*.la' -exec rm -rf {} ';'
-find %{buildroot} -name '*.a' -exec rm -rf {} ';'
 
 %find_lang %{name}
 
