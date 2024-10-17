@@ -7,7 +7,7 @@ Version:	1.6.0
 Release:	2
 Group:		Graphical desktop/Other
 License:	GPLv2+
-URL:		http://pub.mate-desktop.org
+URL:		https://pub.mate-desktop.org
 Source0:    http://pub.mate-desktop.org/releases/%{url_ver}/%{oname}-%{version}.tar.xz
 
 BuildRequires:	intltool
